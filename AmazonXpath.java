@@ -15,8 +15,12 @@ public class AmazonXpath {
 		driver.findElement(By.xpath("(//div[text()=\"bags\"])[2]")).click();
 		driver.findElement(By.xpath("//span[text()='American Tourister']")).click();			
 		driver.findElement(By.xpath("//span[text()='Featured']")).click();
-	    driver.findElement(By.xpath("//a[text()='Newest Arrivals']")).click();
-	    //driver.findElement(By.xpath("//span[@class='a-size-base-plus a-color-base a-text-normal']")).click();
-	}
+	    driver.findElement(By.xpath("//a[text()='Newest Arrivals']")).click();	   
+	    String name = driver.findElement(By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4'])[1]")).getText();
+        System.out.println(name);
+        String title = driver.getTitle();
+        System.out.println(title);
+        driver.close();
         
+}
 }
